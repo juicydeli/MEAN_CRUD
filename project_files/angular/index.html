@@ -1,0 +1,111 @@
+<html ng-app="crudApp" ng-controller='DemoController'>
+<head>
+    <title>AngularJS CRUD Operations Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- Include main CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Include jQuery library -->
+    <script src="js/jQuery/jquery.min.js"></script>
+    <!-- Include AngularJS library -->
+    <script src="lib/angular/angular.min.js"></script>
+
+    <!-- Include Bootstrap Javascript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/ng-infinite-scroll.min.js"></script>
+</head>
+
+<body style="background-color: #ddd;">
+    <div class="container wrapper" ng-controller="DbController">
+
+        <div class="panel panel-default">
+            <div class="panel-body" style="background-color: #ddd;">
+
+                <div class="col-md-4 col-md-offset-3">
+
+<!-- Include form template which is used to insert data into database-->
+                    <div ng-include src="'templates/form.html'"></div>
+
+                    <div class="well"
+                         style="background-color: #fff;
+                                 margin-top: -15px;">
+
+                            <div class="icon-addon addon-lg">
+                                <input type="text"
+                                       class="form-control"
+                                       style="padding-left: 18px;"
+                                       placeholder="Filter"
+                                       ng-model="search_query">
+
+                                <label for="filter"
+                                       class="glyphicon glyphicon-search"
+                                       style="top: -26px;
+                                       margin: 3px;"
+                                       rel="tooltip" title="filter">
+
+                                </label>
+
+                            </div>
+
+
+                            <div style="margin-top: 10px;
+                                        margin-left: 2px;">
+
+                                <div class="container">
+                                    <div infinite-scroll='postit.nextPage()'
+                                         infinite-scroll-disabled='postit.busy'
+                                         infinite-scroll-distance='1'>
+
+                                    <div class="row"
+                                             style="margin-bottom: 10px;"
+                                             ng-repeat="item in postit.items|
+                                             filter:search_query">
+                                            <div>
+
+                                                <div class="media">
+                                                    <div class="media-left">
+                                                        <gravatar
+                                                                email="{{item.email}}"
+                                                                size="50"
+                                                                default="monsterid">
+                                                        </gravatar>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h4 class="media-heading">
+                                                            {{item.email}}
+                                                        </h4>
+                                                        <div style="width: 10em; height: 1.2em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                                            {{item.msg}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    </div>
+<!-- Include controller -->
+<script src="js/angular-script.js"></script>
+<script src="js/angular-md5.js"></script>
+<script src="js/angular-gravatar.js"></script>
+<script src="js/gapp.js"></script>
+</body>
+</html>
