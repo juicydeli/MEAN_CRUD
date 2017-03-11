@@ -51,7 +51,7 @@ Step 1: Create application structure.
       
     app.js - Server entry-point.
     
-    <client> FE (AngularJS base)
+    <angular> FE (AngularJS base)
       <css>
         bootstrap.min.css
         style.css - Custome FE stylesheet modification
