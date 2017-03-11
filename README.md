@@ -22,3 +22,10 @@ Add a new blob by going to `http://127.0.0.1:3000/blobs/new`.
 After submitting, this will take you back to the index page where you can now `Show` or `Edit` or `Delete` that blob record from the UI
 
 All of the REST pieces are baked in as well. You can test them using a multitude of different REST based tools.
+
+## Contribution
+Create a fork of the project into your own reposity. Make all your necessary changes and create a pull request with a description on what was added or removed and details explaining the changes in lines of code. If approved, project owners will merge it.
+
+Licensing
+---------
+MEAN_CRUD is freely distributed under the MIT License. See LICENSE for details
