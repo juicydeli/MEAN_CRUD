@@ -1,2 +1,25 @@
 # Simple-mean CRUD
 A barebones CRUD app implemented with the full MEAN stack. Meant to be a starting point and reference for beginners.
+Express-node-mongo-skeleton was made to have a simple skeleton for a completed Web App ready to go for demonstration purposes and learning how to build CRUD & REST operations into a Node.js Web App.
+
+## Prerequisites
+Make sure you have installed all of the following prerequisites on your development machine: MEAN stack packages.
+-NodeJS.
+-Amgular 1.5.
+-MongoDB
+
+## Installation
+-Create a MongoDB database named `mean-db` (`use mean-db`)
+-Install packages and start the express.js web service
+-Navigate to `http://127.0.0.1:3000` to see the express.js welcome page
+
+## Usage Instructions
+All of the MVC pieces are built, but are also rudimentary and not flashy. The root of our webapp goes to the express.js landing page, but there is a schema created for a new object called `blobs`. To access `blobs`, follow the route that is already in place by going to `http://127.0.0.1:3000/blobs`.
+
+Add a new blob by going to `http://127.0.0.1:3000/blobs/new`. 
+<center><img src="https://s3.amazonaws.com/kennyonetime/blob_new.png" width="400"></center>
+
+After submitting, this will take you back to the index page where you can now `Show` or `Edit` or `Delete` that blob record from the UI
+<center><img src="https://s3.amazonaws.com/kennyonetime/blob_all.png" width="600"></center>
+
+All of the REST pieces are baked in as well. You can test them using a multitude of different REST based tools.
